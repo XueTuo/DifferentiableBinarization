@@ -9,7 +9,7 @@ from generator import generate
 from model import dbnet
 checkpoints_dir = f'checkpoints/{datetime.date.today()}'
 
-batch_size = 16
+batch_size = 4
 
 if not osp.exists(checkpoints_dir):
     os.makedirs(checkpoints_dir)

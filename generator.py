@@ -85,8 +85,8 @@ def draw_thresh_map(polygon, canvas, mask, shrink_ratio=0.4):
     ymax_valid = min(max(0, ymax), canvas.shape[0] - 1)
     canvas[ymin_valid:ymax_valid + 1, xmin_valid:xmax_valid + 1] = np.fmax(
         1 - distance_map[
-            ymin_valid - ymin:ymax_valid - ymin,
-            xmin_valid - xmin:xmax_valid - xmin],
+            ymin_valid - ymin:ymax_valid - ymin+1,
+            xmin_valid - xmin:xmax_valid - xmin+1],
         canvas[ymin_valid:ymax_valid + 1, xmin_valid:xmax_valid + 1])
 
 
@@ -137,6 +137,7 @@ def generate(data_dir, batch_size=16, image_size=640, min_text_size=8, shrink_ra
         image_path = image_paths[i]
         anns = all_anns[i]
         image = cv2.imread(image_path)
+        print('------------------->',image_path)
         # show_polys(image.copy(), anns, 'before_aug')
         if is_training:
             transform_aug = transform_aug.to_deterministic()
