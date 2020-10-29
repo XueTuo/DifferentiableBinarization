@@ -12,6 +12,10 @@ Build dataset in the same way as the official implementation.
   datasets/total_text/test_gts
   datasets/total_text/test_list.txt
 ```
+## DataSets
+The root of the dataset directory can be DB/datasets/.
+
+Download the converted ground-truth and data list Baidu Drive (download code: mz0a), Google Drive. The images of each dataset can be obtained from their official website.
 
 ## Train
 `python train.py`
