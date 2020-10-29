@@ -15,7 +15,7 @@ Build dataset in the same way as the official implementation.
 ## DataSets
 The root of the dataset directory can be DB/datasets/.
 
-Download the converted ground-truth and data list Baidu Drive (download code: mz0a), Google Drive. The images of each dataset can be obtained from their official website.
+Download the converted ground-truth and data list [Baidu Drive](https://pan.baidu.com/s/1BPYxcZnLXN87rQKmz9PFYA) (download code: mz0a), [Google Drive](https://drive.google.com/drive/folders/12ozVTiBIqK8rUFWLUrlquNfoQxL2kAl7). The images of each dataset can be obtained from their official website.
 
 ## Train
 `python train.py`
